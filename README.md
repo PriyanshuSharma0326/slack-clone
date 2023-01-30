@@ -61,7 +61,8 @@ To run this project, you will need to add the following environment variables to
 ## Tech Stack
 
 **Client:** React, Redux, MaterialUI, Styled Components
-**Server** Firestore, Google Auth
+
+**Server:** Firestore, Google Auth
 
 
 ## Deployment
