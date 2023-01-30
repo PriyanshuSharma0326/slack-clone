@@ -39,49 +39,49 @@ export default function Chat() {
 
     return (
         <ChatContainer>
-        {roomDetails && roomMessages && (
-            <>
-                <ChatHeader>
-                    <ChatHeaderLeft>
-                        <h4>
-                            <strong>#{roomDetails?.data().name.replaceAll(' ', '-')}</strong>
-                        </h4>
+            {roomDetails && roomMessages && (
+                <>
+                    <ChatHeader>
+                        <ChatHeaderLeft>
+                            <h4>
+                                <strong>#{roomDetails?.data().name.replaceAll(' ', '-')}</strong>
+                            </h4>
 
-                        <StarBorderOutlinedIcon />
-                    </ChatHeaderLeft>
+                            <StarBorderOutlinedIcon />
+                        </ChatHeaderLeft>
 
-                    <ChatHeaderRight>
-                        <p>
-                            <InfoOutlinedIcon /> Details
-                        </p>
-                    </ChatHeaderRight>
-                </ChatHeader>
+                        <ChatHeaderRight>
+                            <p>
+                                <InfoOutlinedIcon /> Details
+                            </p>
+                        </ChatHeaderRight>
+                    </ChatHeader>
 
-                <ChatMessages>
-                    {roomMessages?.docs.map(doc => {
-                        const { message, timestamp, user, userImage } = doc.data();
+                    <ChatMessages>
+                        {roomMessages?.docs.map(doc => {
+                            const { message, timestamp, user, userImage } = doc.data();
 
-                        return (
-                            <Message 
-                                key={doc.id}
-                                message={message}
-                                timestamp={timestamp}
-                                user={user}
-                                userImage={userImage}
-                            />
-                        );
-                    })}
+                            return (
+                                <Message 
+                                    key={doc.id}
+                                    message={message}
+                                    timestamp={timestamp}
+                                    user={user}
+                                    userImage={userImage}
+                                />
+                            );
+                        })}
 
-                    <ChatBottom ref={chatRef} />
-                </ChatMessages>
+                        <ChatBottom ref={chatRef} />
+                    </ChatMessages>
 
-                <ChatInput 
-                    chatRef={chatRef}
-                    channelName={roomDetails?.data().name}
-                    channelId={roomId} 
-                />
-            </>
-        )}
+                    <ChatInput 
+                        chatRef={chatRef}
+                        channelName={roomDetails?.data().name}
+                        channelId={roomId} 
+                    />
+                </>
+            )}
         </ChatContainer>
     );
 }
