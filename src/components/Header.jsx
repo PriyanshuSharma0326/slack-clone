@@ -73,7 +73,7 @@ const HeaderSearch = styled.div`
     background-color: #421F44;
     text-align: center;
     display: flex;
-    padding: 0 50px;
+    padding: 0 5px;
     color: gray;
     border: 1px gray solid;
 
@@ -81,7 +81,7 @@ const HeaderSearch = styled.div`
         background-color: transparent;
         border: none;
         text-align: center;
-        min-width: 30vw;
+        min-width: 40vw;
         outline: none;
         color: white;
     }

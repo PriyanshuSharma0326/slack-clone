@@ -57,7 +57,7 @@ export default function Chat() {
                         </ChatHeaderRight>
                     </ChatHeader>
 
-                    <ChatMessages>
+                    <>
                         {roomMessages?.docs.map(doc => {
                             const { message, timestamp, user, userImage } = doc.data();
 
@@ -73,7 +73,7 @@ export default function Chat() {
                         })}
 
                         <ChatBottom ref={chatRef} />
-                    </ChatMessages>
+                    </>
 
                     <ChatInput 
                         chatRef={chatRef}
@@ -129,10 +129,6 @@ const ChatHeaderRight = styled.div`
     }
 `;
 
-const ChatMessages = styled.div`
-
-`;
-
 const ChatBottom = styled.div`
-    padding-bottom: 200px;
+    padding-bottom: 88px;
 `;
