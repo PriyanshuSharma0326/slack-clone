@@ -1,7 +1,9 @@
 
 # Slack 2.0
 
-Clone web application of Slack.com built on React library and designed with Styled Components and MaterialUI. It has the functionality to Login using Google Auth with a loading screen. The interactive home page has different channels on the sidebar which contain their respective chats which is pulled from the firestore. 
+Clone web application of Slack.com built on React library and designed with Styled Components and MaterialUI. It has the functionality to Login using Google Auth with a loading screen. The interactive home page has different channels on the sidebar which contain their respective chats which is pulled from the firestore.
+
+![Site preview](https://pikwy.com/web/642d477e70f1f8155e698419)
 
 
 ## Run Locally
